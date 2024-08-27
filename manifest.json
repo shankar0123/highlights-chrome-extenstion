@@ -1,0 +1,41 @@
+{
+   "action": {
+      "default_icons": {
+         "128": "Synhi_X_128.png",
+         "16": "Synhi_X_16.png",
+         "32": "Synhi_X_32.png",
+         "48": "Synhi_X_48.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Synhi Browser Extension"
+   },
+   "author": "Datumtron Corp., Ashraf Azmi",
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "Discover a New Way of Reading the Web with Color-Coded Syntax Highlighting. It's Effortless and Completely Free!",
+   "host_permissions": [ "https://www.datumtron.com/*" ],
+   "icons": {
+      "128": "Synhi_X_128.png",
+      "16": "Synhi_X_16.png",
+      "32": "Synhi_X_32.png",
+      "48": "Synhi_X_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwdS5QBCnubABTc0qdOYfUbhRx+LRHLsIN4cM0uWD/G5aL9WYYZK4GHlupBSLKfMXNTCbkFLbeUJPQVU/6azYZExd40awkLNTz4YilZlPYh5AmrtOwt3kAlCTZPF0E204Xr2nek/RwjRfcBeG6b+IawbPvc7R3k6FJhgVC70AMVjTQ1wkzyVSrii5V1RQMYRHcZmiLd4e6srXk/oPi7fEeQtm+XcO0iAXts2vwQp1s+AUbL8LQE+3jFLFHral+w6OP22+Bfk+MTHK6HJ0DAgYjAfrbVmJvBv1IOOCH2zZut6Fci98Ba3wmH2AexblWBd7dm5BN0SQ6TxU8wPKerNXFQIDAQAB",
+   "manifest_version": 3,
+   "name": "Synhix - Read Better in Color",
+   "permissions": [ "offscreen", "storage", "contextMenus", "identity", "identity.email" ],
+   "sandbox": {
+      "pages": [ "index.html" ]
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "24.03.02",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "index.html" ]
+   } ]
+}

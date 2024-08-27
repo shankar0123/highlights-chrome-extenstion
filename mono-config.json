@@ -1,0 +1,180 @@
+{
+  "mainAssemblyName": "Synhix.dll",
+  "assemblyRootFolder": "managed",
+  "debugLevel": -1,
+  "assets": [
+    {
+      "behavior": "assembly",
+      "name": "Abstract.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "Abstract.pdb"
+    },
+    {
+      "behavior": "assembly",
+      "name": "Atum.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "Atum.pdb"
+    },
+    {
+      "behavior": "assembly",
+      "name": "Concrete.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "Concrete.pdb"
+    },
+    {
+      "behavior": "assembly",
+      "name": "Graph.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "Graph.pdb"
+    },
+    {
+      "behavior": "assembly",
+      "name": "netstandard.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "NLU.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "NLU.pdb"
+    },
+    {
+      "behavior": "assembly",
+      "name": "OfO.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "OfO.pdb"
+    },
+    {
+      "behavior": "assembly",
+      "name": "Synhix.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "Synhix.pdb"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Collections.Concurrent.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Collections.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.ComponentModel.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.ComponentModel.Primitives.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.ComponentModel.TypeConverter.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Console.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Diagnostics.DiagnosticSource.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Drawing.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Drawing.Primitives.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Linq.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Memory.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Net.Http.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Net.Primitives.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.ObjectModel.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Private.CoreLib.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Private.Uri.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Runtime.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Runtime.InteropServices.JavaScript.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Runtime.Serialization.Formatters.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "System.Text.RegularExpressions.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "VMM.dll"
+    },
+    {
+      "behavior": "assembly",
+      "name": "VMM.pdb"
+    },
+    {
+      "virtualPath": "runtimeconfig.bin",
+      "behavior": "vfs",
+      "name": "supportFiles/0_runtimeconfig.bin"
+    },
+    {
+      "loadRemote": false,
+      "behavior": "icu",
+      "name": "icudt.dat"
+    },
+    {
+      "virtualPath": "/usr/share/zoneinfo/",
+      "behavior": "vfs",
+      "name": "dotnet.timezones.blat"
+    },
+    {
+      "behavior": "dotnetwasm",
+      "name": "dotnet.wasm"
+    }
+  ],
+  "remoteSources": [],
+  "pthreadPoolSize": 0
+}

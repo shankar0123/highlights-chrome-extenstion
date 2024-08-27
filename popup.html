@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Synhi Extension</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 440px;
+            padding: 0px 20px 10px 20px; /*top, right, bottom, left*/
+        }
+        body::before {
+            content: "";
+            background-image: url('Synhi_X_128_cut60.png');
+            opacity: 0.09; /* Set to desired opacity value */
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1; /* Place it behind the content */
+        }
+        h1 {
+            font-size: 32px;
+            color: #4a90e2;
+        }
+        h2 {
+            font-size: 20px;
+            color: #4a90e2;
+        }
+        h3 {
+            font-size: 12px;
+            color: darkblue;
+        }
+        h4 {
+            font-size: 12px;
+            color: darkblue;
+            text-align: center;
+        }
+        h5 {
+            font-size: 10px;
+            color: darkblue;
+            text-align: center;
+        }
+        p {
+            font-size: 12px;
+            color: #555555;
+        }
+        label {
+            font-size: 11px;
+            color: darkblue;
+        }
+        select {
+            font-family: Arial, sans-serif;
+        }
+        .table1{
+            width: 400px;
+        }
+        /*image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        image-container img {
+            width: 80px;
+            height: 80px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        */
+        .button1 {
+            display: block;
+            width: 100%;
+            padding: 8px 10px;
+            text-align: center;
+            background-color: #4a90e2;
+            color: #ffffff;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+        }
+        .button1:hover {
+            background-color: #3472bd;
+        }
+        .button2 {
+            display: block;
+            /*width: 100%;*/
+            padding: 8px 10px;
+            text-align: center;
+            background-color: #4a90e2;
+            color: #ffffff;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+        }
+        .button2:disabled {
+            background-color: #cccccc; /* Gray background */
+            color: #666666; /* Darker text */
+            cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+        }
+        .button2:hover {
+        background-color: #3472bd;
+        }
+        
+        a:visited {
+            color: blue;
+        }
+        .apay{
+            width:422px;
+        }
+        .apay:visited{
+            color:white;
+        }
+        /*
+        .button90 {
+            width: 90px;
+        }
+        .button50 {
+            width: 50px;
+        }
+        .button1 {
+            display: block;
+            width: 100%;
+            padding: 10px 10px;
+            text-align: center;
+            background-color: #4a90e2;
+            color: #ffffff;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+        }
+ 
+        .button1:hover {
+            background-color: #3472bd;
+        }*/
+        .select1 {
+            display: block;
+            padding: 8px 20px;
+            background-color: darkblue;
+            color: #ffffff;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+        }
+        .select1:hover {
+            background-color: blue;
+        }
+        /* NOT WORKING
+        .option1 {
+            padding: 15px 10px;
+        }*/
+       .center-content {
+            text-align: center; /* Horizontally center content */
+            vertical-align: middle; /* Vertically center content */
+        }
+        /*---*/  
+        /*--- On off switch ---*/
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 30px; /* Further reduced from 40px */
+            height: 16px; /* Further reduced from 22px */
+        }
+
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 14px; /* Further reduced from 18px */
+                width: 14px; /* Further reduced from 18px */
+                left: 1px; /* Adjusted for smaller size */
+                bottom: 1px; /* Adjusted for smaller size */
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(14px); /* Adjusted for smaller size */
+            -ms-transform: translateX(14px);
+            transform: translateX(14px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 16px; /* Adjusted for smaller height */
+        }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }
+       /*--- End of switch*/
+    </style>
+</head>
+<body>
+    <script src="popup.js"></script> <!--nonce="sphinx"-->
+    <center>
+        <h1>Synhix</h1>
+        <h2>Read in Color</h2>
+        <h5>
+            Created by Ash Azmi at Datumtron Corp. <a href="https://www.datumtron.com" target="_blank">www.datumtron.com</a><br>Please send feedback to <a href="mailto: synhix@datumtron.com">synhix@datumtron.com</a>
+        </h5>
+    </center>
+    <table class="table1">
+        <tr>
+            <td>
+                <label for="theme">Theme</label>
+                <select id="theme" class="select1">
+                    <option class="option1" value="Experimental">Experimental</option>
+                    <option class="option1" value="Liberal" selected>Liberal</option>
+                    <option class="option1" value="Moderate">Moderate</option>
+                    <option class="option1" value="Conservative">Conservative</option>
+                    <option class="option1" value="Black and White">Black and White</option>
+                </select>
+            </td>
+            <td>
+                <label for="color">Color</label>
+                <select id="color" class="select1">
+                    <option class="option1" value="Gray1" selected>Gray1</option>
+                    <option class="option1" value="Gray2">Gray2</option>
+                    <option class="option1" value="Red">Red</option>
+                    <option class="option1" value="Green">Green</option>
+                    <option class="option1" value="Blue">Blue</option>
+                    <option class="option1" value="Purple">Purple</option>
+                    <option class="option1" value="Cyan">Cyan</option>
+                    <option class="option1" value="Yellow">Yellow</option>
+                </select>
+            </td>
+            <td>
+                <label for="sharpness">Contrast</label>
+                <select id="sharpness" class="select1">
+                    <option value="Very Soft">Very Soft</option>
+                    <option value="Soft">Soft</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="Sharp">Sharp</option>
+                    <option value="Very Sharp">Very Sharp</option>
+                </select>
+            </td>
+            <td>
+                <br>
+                <button id="update" class="button1">Update</button>
+            </td>
+        </tr>
+    </table>
+    <!--
+    <div class="image-container">
+        <img src="images/bfly_rbgx.svg" alt="Liberal"         >
+        <img src="images/bfly_rbx.svg"  alt="Moderate"       >
+        <img src="images/bfly_bx.svg"   alt="Conservative"   >
+        <img src="images/bfly_blkx.svg" alt="Black and White">
+    </div>
+    -->
+    <!-- <p>We are testing a community cooperative payment system, if you can't pay for it, you can use the software without paying.</p>-->
+    <!--<h3 id="paymessage">
+        Support the development and help us keep Synhix free for the younger community members.
+    </h3>-->
+    <!--
+    https://chrome.google.com/webstore/detail/synhix/mbhcianpafbengiglmifelchphkmlpci
+    -->
+    <h4>
+        <a id="paybutton" href="https://buy.stripe.com/14kbLpfsI16s20U3cc" target="_blank" class="apay button1">Pay if you can</a>
+        <br>Or<br>share your thoughts about Synhix on<br>
+        <!-- Share on Facebook -->
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://chrome.google.com/webstore/detail/synhix/mbhcianpafbengiglmifelchphkmlpci" target="_blank" rel="noopener noreferrer">
+            Facebook
+        </a> |
+        <!-- Share on Twitter -->
+        <a href="https://twitter.com/share?url=https://chrome.google.com/webstore/detail/synhix/mbhcianpafbengiglmifelchphkmlpci&text=Check%20out%20this%20awesome%20Chrome%20extension!" target="_blank" rel="noopener noreferrer">
+            Twitter X
+        </a> |
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://chrome.google.com/webstore/detail/synhix/mbhcianpafbengiglmifelchphkmlpci&title=Synhix&summary=Check%20out%20this%20awesome%20Chrome%20extension!" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+        </a> |
+        <!-- Reddit -->
+        <a href="https://www.reddit.com/submit?url=https://chrome.google.com/webstore/detail/synhix/mbhcianpafbengiglmifelchphkmlpci&title=Check%20out%20this%20awesome%20Chrome%20extension!" target="_blank" rel="noopener noreferrer">
+            Reddit
+        </a> |
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+            Instagram
+        </a> |
+        <a href="https://www.snapchat.com/" target="_blank" rel="noopener noreferrer">
+            Snapchat
+        </a> |
+        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">
+            Tik Tok
+        </a>
+        <br>
+        <a href="mailto:?subject=Read in Color! &body=I found this great browser extension called Synhix. It colors website text using Syntax Highlighting technology. Check it out at https://chrome.google.com/webstore/detail/synhix/mbhcianpafbengiglmifelchphkmlpci">Share via Email</a>
+    </h4>
+    <h4>
+        Enterprise users must purchase <a href="https://buy.stripe.com/14kbLpfsI16s20U3cc" target="_blank">a Synhix subscription.</a>
+    </h4>
+    <h4>
+        <a href="https://chrome.google.com/webstore/detail/synhix/mbhcianpafbengiglmifelchphkmlpci" target="_blank">Please rate Synhix</a>
+    </h4>
+    <h5>
+        copy Synhix link <br>
+        <a href="https://chrome.google.com/webstore/detail/synhix/mbhcianpafbengiglmifelchphkmlpci" target="_blank">https://chrome.google.com/webstore/detail/synhix/mbhcianpafbengiglmifelchphkmlpci</a>
+    </h5>
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 100px;"><button id="uncolor" class="button2">Uncolor page</button></tdstyle="width:>
+            <td style="width: 100px;"><button id="default" class="button2">Reset Theme</button></td>
+            <td style="width: 55%; text-align: right;">
+                <label id="active_text">Active</label>
+                <label class="switch"><input type="checkbox" id="activate" checked><span class="slider round"></span></label>
+            </td>
+        </tr>
+    </table>
+ 
+</body>
+</html>
